@@ -1,0 +1,66 @@
+// Variables for consistent styling
+$primary-color: #4CAF50;
+$secondary-color: #f9f9f9;
+$font-family: 'Arial, sans-serif';
+$border-radius: 5px;
+
+// Mixin for reusable button styles
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 15px;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Form styling
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $secondary-color;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: $font-family;
+
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    font-size: 14px;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+  }
+
+  button {
+    @include button-style($primary-color, #fff);
+    width: 100%;
+  }
+}

@@ -1,13 +1,10 @@
-import Person from "./components/Person"
-
+import Person from "./components/person/view/personView" 
  
 
 function App() { 
   return (
-    <>
-      <div>
-        <Person />
-        </div>
+    <> 
+        <Person /> 
     </>
   )
 }
